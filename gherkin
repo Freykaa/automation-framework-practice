@@ -1,0 +1,79 @@
+Feature: Sign in
+    #for the purpose of learning and saving time, create one positive scenario
+
+    Scenario: Sign in using email
+        Given user is registered 
+        When user logs in with valid credentials
+        Then user should be redirected to workspace page
+
+
+Feature: Edit user profile
+    #for the purpose of learning and saving time, create one negative scenario
+
+    Scenario: 'Username is taken' error when changing username
+        Given user is on the profile page
+        When user changes username
+        And saves changes
+        Then error message 'Username is taken' should be displayed 
+
+
+Feature: Create a board
+    #for the purpose of learning and saving time, create one positive scenario
+
+    Scenario: Create a board with default settings using 'Create new board' section
+        Given user is on the workspace page
+        When user creates new board
+        Then user should be redirected to the board page
+
+
+Feature: Board Search
+    #for the purpose of learning and saving time, create one positive scenario
+
+    Scenario: Search a board by name
+        Given user is on the workspace page
+        When user searches for a board
+        Then user should be redirected to the board page
+
+
+Feature: List
+    #for the purpose of learning and saving time, create one positive scenario
+
+    Scenario: Add a list
+        Given user is on the board page
+        When user adds a list
+        Then the list should be displayed on the board page
+
+
+Feature: Card
+    #for the purpose of learning and saving time, create one positive scenario
+
+    Scenario: Add a card
+        Given user is on the board page
+        When user adds a card
+        Then the card should be displayed on the board page
+
+
+Feature: Board Filter 
+    #for the purpose of learning and saving time, create one positive scenario
+
+    Scenario: Filter card by label
+        Given user is on the board page
+        When user filters by label
+        Then card with correct labels should be displayed on the board page
+
+
+Feature: Edi workspace
+    #for the purpose of learning and saving time, create one positive scenario
+
+    Scenario: Edit workspace name
+        Given user is on the workspace page
+        When user changes workspace name
+        Then workspace name should be updated and displayed on the workspace page
+    
+
+
+
+
+
+
+
