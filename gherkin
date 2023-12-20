@@ -10,10 +10,10 @@ Feature: Sign in
 Feature: Edit user profile
     #for the purpose of learning and saving time, create one negative scenario
 
-    Scenario: 'Username is taken' error when changing username
+    Scenario: Error when changing to existing username
         Given user is on the profile page
         When user changes username
-        And saves changes
+        And user saves changes
         Then error message 'Username is taken' should be displayed 
 
 
@@ -62,7 +62,7 @@ Feature: Board Filter
         Then card with correct labels should be displayed on the board page
 
 
-Feature: Edi workspace
+Feature: Edit workspace
     #for the purpose of learning and saving time, create one positive scenario
 
     Scenario: Edit workspace name
