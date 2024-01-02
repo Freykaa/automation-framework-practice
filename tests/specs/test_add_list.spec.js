@@ -28,14 +28,14 @@ const openBoardTab = async () => {
 
 
 const chooseBoard = async () => {
-    const boardTile = $('a.board-tile');
-    await boardTile.click();
+    const openBoardTile = await $('//div[@title="filter"]'); //a specific selector 'filter' for the test
+    await openBoardTile.click();
 
-}
+};
 
 const addList = async (listValue) => {
     const createListBtn = await $('button[data-testid="list-composer-button"]');
-    const listNameArea = await $('textarea[name="Enter list title…"]');
+    const listNameArea = await $('form > textarea');
     const addListBtn = await $('button[data-testid="list-composer-add-list-button"]');
     const listName = await $('h2[data-testid="list-name"]')
 

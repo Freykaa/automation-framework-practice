@@ -51,7 +51,15 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+            'goog:chromeOptions': {
+            args: ['headless', 'disable-gpu']
+        },  
+        browserName: 'firefox',
+            'moz:firefoxOptions': {
+            args: ['-headless']
+        }, 
+        // browserName: 'safari'
     }],
 
     //
@@ -113,13 +121,13 @@ export const config = {
     
     //
     // The number of times to retry the entire specfile when it fails as a whole
-    // specFileRetries: 1,
+    specFileRetries: 1,
     //
     // Delay in seconds between the spec file retry attempts
-    // specFileRetriesDelay: 0,
+    specFileRetriesDelay: 0,
     //
     // Whether or not retried spec files should be retried immediately or deferred to the end of the queue
-    // specFileRetriesDeferred: false,
+    specFileRetriesDeferred: false,
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
@@ -209,8 +217,8 @@ export const config = {
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
      */
-    // beforeHook: function (test, context, hookName) {
-    // },
+    /* beforeHook: function (test, context, hookName) {
+    }, */
     /**
      * Hook that gets executed _after_ a hook within the suite starts (e.g. runs after calling
      * afterEach in Mocha)

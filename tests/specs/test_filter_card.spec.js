@@ -28,8 +28,8 @@ const openBoardTab = async () => {
 
 
 const chooseBoard = async () => {
-    const openBoardTile = await $$('a.board-tile');
-    await openBoardTile[1].click();
+    const openBoardTile = await $('//div[@title="filter"]'); //a specific selector 'filter' for the test
+    await openBoardTile.click();
 
 };
 
