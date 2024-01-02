@@ -52,14 +52,14 @@ export const config = {
     //
     capabilities: [{
         browserName: 'chrome',
-        'goog:chromeOptions': {
+            'goog:chromeOptions': {
             args: ['headless', 'disable-gpu']
-        },
+        },  
         browserName: 'firefox',
-        'moz:firefoxOptions': {
+            'moz:firefoxOptions': {
             args: ['-headless']
-        },
-        //browserName: 'safari'
+        }, 
+        // browserName: 'safari'
     }],
 
     //
@@ -217,8 +217,8 @@ export const config = {
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
      */
-    // beforeHook: function (test, context, hookName) {
-    // },
+    /* beforeHook: function (test, context, hookName) {
+    }, */
     /**
      * Hook that gets executed _after_ a hook within the suite starts (e.g. runs after calling
      * afterEach in Mocha)

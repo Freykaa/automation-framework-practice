@@ -22,7 +22,7 @@ const login = async () => {
 const editWorkspaceName = async (newWorkspaceName) => {
     const editIcon = await $('span[data-testid="EditIcon"]');
     const nameInput = await $('input#displayName');
-    const saveButton = await $('button=Save');
+    const saveButton = await $('form>button[type=submit]');
     const workspaceName = await $('span[data-testid="home-team-tab-name"]');
 
     await editIcon.click();

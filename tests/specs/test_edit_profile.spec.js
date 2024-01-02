@@ -35,7 +35,7 @@ const navigateToAccountMenuProfile = async () => {
     
 const enterAndSaveUsername = async (username) => {
         const usernameField = await $('#username');
-        const saveBtn = await $('//button[text()="Save"]');
+        const saveBtn = await $('button[type=submit]');
     
         await usernameField.setValue(username);
         await saveBtn.click();
