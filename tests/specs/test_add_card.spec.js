@@ -1,3 +1,7 @@
+import chai from 'chai';
+
+const { expect } = chai;
+
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
     const loginUsername = await $('#username');
@@ -47,7 +51,7 @@ const addCard = async (cardValue) => {
 };
 
 describe("Add card", () => {
-    it("Add default card to the board", async () => {
+     it("Add default card to the board", async () => {
         const cardName = await $('a[data-testid="card-name"]');
         const cardValue = 'newcard';
 
@@ -55,9 +59,10 @@ describe("Add card", () => {
         await openBoardTab();
         await chooseBoard();
         await addCard(cardValue);
-        const getCardName = await cardName.getText();
 
-        await expect(getCardName).toEqual(cardValue);
-    })
-})
+        const getCardName = await cardName.getText();
+        expect(getCardName).to.equal(cardValue);
+    });
+});
+
 

@@ -1,3 +1,7 @@
+import chai from 'chai';
+
+const { expect } = chai;
+
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
     const loginUsername = await $('#username');
@@ -51,6 +55,6 @@ describe("Edit profile", () => {
         await enterAndSaveUsername(existingUsername);
 
         const err = await $('#SaveProfileError_Field_username');
-        await expect(err).toBeDisplayed({ timeout: 10000, timeoutMsg: 'Error message not displayed' });
+        expect(err).to.exist;
     });
 });

@@ -1,3 +1,7 @@
+import chai from 'chai';
+
+const { expect } = chai;
+
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
     const loginUsername = await $('#username');
@@ -40,6 +44,6 @@ describe("Search", () => {
         await boardNameDisplayed.waitForDisplayed({ timeout: 10000 });
 
         const nameAfterSearch = await boardNameDisplayed.getText();
-        await expect(nameAfterSearch).toEqual('newboard'); 
+        expect(nameAfterSearch).to.equal(searchValue); 
     });
 });

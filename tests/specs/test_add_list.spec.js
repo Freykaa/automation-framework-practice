@@ -1,3 +1,7 @@
+import chai from 'chai';
+
+const { expect } = chai;
+
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
     const loginUsername = await $('#username');
@@ -56,9 +60,8 @@ describe("Add list", () => {
         await openBoardTab();
         await chooseBoard();
         await addList(listValue);
+        
         const getListName = await listName.getText();
-
-
-        await expect(getListName).toEqual(listValue);
+        expect(getListName).to.equal(listValue);
     });
 });
