@@ -1,3 +1,7 @@
+import chai from 'chai';
+
+const { assert } = chai;
+
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
     const loginUsername = await $('#username');
@@ -53,7 +57,7 @@ describe("filterCard", () => {
         const numberOfMatches = await $('[data-testid="filter-popover-button-filter-count"] span').getText();
         const matchExist = await numberOfMatches > 0;
 
-        await expect(matchExist).toEqual(true);
+        assert.isTrue(matchExist, 'numberOfMatches > 0');
     });
 });
 

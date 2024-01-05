@@ -1,3 +1,7 @@
+import chai from 'chai';
+
+const { expect } = chai;
+
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
     const loginUsername = await $('#username');
@@ -46,6 +50,6 @@ describe("Edit workspace", () => {
         await editWorkspaceName(newWorkspaceName);
 
         const getHomeWorkspaceName = await $('span[data-testid="home-team-tab-name"]').getText();
-        await expect(getHomeWorkspaceName).toEqual(newWorkspaceName);
+        expect(getHomeWorkspaceName).to.equal(newWorkspaceName);
     });
 });

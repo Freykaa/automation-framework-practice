@@ -1,3 +1,7 @@
+import chai from 'chai';
+
+const { expect } = chai;
+
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
     const loginUsername = await $('#username');
@@ -48,6 +52,6 @@ describe("Create a board", () => {
         await login();
         await createNewBoard(newBoardName);
         const nameAfterCreation = await boardNameDisplayed.getText();
-        await expect(nameAfterCreation).toEqual(newBoardName);
+        expect(nameAfterCreation).to.equal(newBoardName);
     })
 })

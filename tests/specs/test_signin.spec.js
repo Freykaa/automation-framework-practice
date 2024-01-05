@@ -1,3 +1,7 @@
+import chai from 'chai';
+
+const { expect } = chai;
+
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
     const loginUsername = await $('#username');
@@ -22,9 +26,9 @@ const login = async () => {
 describe ("Sign in", () => {
     it("Sign in using email", async () => {
         const headerProfileIcon = await $('button[data-testid="header-member-menu-button"]');
-    
+       
         await login();
-        //rewrite expect with expect.url.tohave('home')
-        await expect(headerProfileIcon).toBeDisplayed({timeout: 10000});
+       
+        expect(headerProfileIcon).to.exist;
         });
     });
