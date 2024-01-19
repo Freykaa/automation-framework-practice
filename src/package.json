@@ -1,0 +1,17 @@
+{
+  "name": "automation-framework-practice",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/cli": "^8.26.3",
+    "@wdio/local-runner": "^8.26.3",
+    "@wdio/mocha-framework": "^8.26.3",
+    "@wdio/spec-reporter": "^8.26.3",
+    "chai": "5.0.o"
+  },
+  "scripts": {
+    "wdio": "wdio ./config/wdio.conf.js"
+  },
+  "dependencies": {
+    "chai": "^5.0.0"
+  }
+}
