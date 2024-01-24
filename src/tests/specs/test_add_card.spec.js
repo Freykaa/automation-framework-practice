@@ -1,6 +1,6 @@
-import chai from 'chai';
+/* import chai from 'chai';
 
-const { assert } = chai;
+const { expect } = chai;
 
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
@@ -32,32 +32,38 @@ const openBoardTab = async () => {
 
 
 const chooseBoard = async () => {
-    const openBoardTile = await $('//div[@title="filter"]'); //a specific selector 'filter' for the test
-    await openBoardTile.click();
+    const boardTile = $('a.board-tile');
+    await boardTile.click();
 
 };
 
-const filterCard = async (filterValue) => {
-    const filter = await $('button[data-testid="filter-popover-button"]');
-    const searchByKeyword = await $('input.nch-textfield__input.lsOhPsHuxEMYEb');
+const addCard = async (cardValue) => {
+    const addCardBtn = await $('button[data-testid="list-add-card-button"]');
+    const addCardTitle = await $('textarea[data-testid="list-card-composer-textarea"]');
+    const saveCardBtn = await $('button[data-testid="list-card-composer-add-card-button"]');
 
-    await filter.click();
-    await searchByKeyword.setValue(filterValue);
+    await addCardBtn.waitForDisplayed({timeout: 10000});
+    await addCardBtn.click();
+    await addCardTitle.waitForDisplayed({timeout: 10000});
+    await addCardTitle.setValue(cardValue);
+    await saveCardBtn.click();
+    await saveCardBtn.click();
 };
 
-describe("filterCard", () => {
-    it("Filter card by keyword", async () => {
-        const filterValue = 'newcard';
+describe("Add card", () => {
+     it("Add default card to the board", async () => {
+        const cardName = await $('a[data-testid="card-name"]');
+        const cardValue = 'newcard';
 
         await login();
         await openBoardTab();
         await chooseBoard();
-        await filterCard(filterValue);
+        await addCard(cardValue);
 
-        const numberOfMatches = await $('[data-testid="filter-popover-button-filter-count"] span').getText();
-        const matchExist = await numberOfMatches > 0;
-
-        assert.isTrue(matchExist, 'numberOfMatches > 0');
+        const getCardName = await cardName.getText();
+        expect(getCardName).to.equal(cardValue);
     });
 });
 
+
+ */

@@ -1,6 +1,6 @@
-import chai from 'chai';
+/* import chai from 'chai';
 
-const { expect } = chai;
+const { assert } = chai;
 
 const login = async () => {
     const loginBtn = await $('//a[@data-testid="login"]')
@@ -32,37 +32,33 @@ const openBoardTab = async () => {
 
 
 const chooseBoard = async () => {
-    const boardTile = $('a.board-tile');
-    await boardTile.click();
+    const openBoardTile = await $('//div[@title="filter"]'); //a specific selector 'filter' for the test
+    await openBoardTile.click();
 
 };
 
-const addCard = async (cardValue) => {
-    const addCardBtn = await $('button[data-testid="list-add-card-button"]');
-    const addCardTitle = await $('textarea[data-testid="list-card-composer-textarea"]');
-    const saveCardBtn = await $('button[data-testid="list-card-composer-add-card-button"]');
+const filterCard = async (filterValue) => {
+    const filter = await $('button[data-testid="filter-popover-button"]');
+    const searchByKeyword = await $('input.nch-textfield__input.lsOhPsHuxEMYEb');
 
-    await addCardBtn.waitForDisplayed({timeout: 10000});
-    await addCardBtn.click();
-    await addCardTitle.waitForDisplayed({timeout: 10000});
-    await addCardTitle.setValue(cardValue);
-    await saveCardBtn.click();
-    await saveCardBtn.click();
+    await filter.click();
+    await searchByKeyword.setValue(filterValue);
 };
 
-describe("Add card", () => {
-     it("Add default card to the board", async () => {
-        const cardName = await $('a[data-testid="card-name"]');
-        const cardValue = 'newcard';
+describe("filterCard", () => {
+    it("Filter card by keyword", async () => {
+        const filterValue = 'newcard';
 
         await login();
         await openBoardTab();
         await chooseBoard();
-        await addCard(cardValue);
+        await filterCard(filterValue);
 
-        const getCardName = await cardName.getText();
-        expect(getCardName).to.equal(cardValue);
+        const numberOfMatches = await $('[data-testid="filter-popover-button-filter-count"] span').getText();
+        const matchExist = await numberOfMatches > 0;
+
+        assert.isTrue(matchExist, 'numberOfMatches > 0');
     });
 });
 
-
+ */

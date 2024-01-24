@@ -9,7 +9,7 @@
     "chai": "5.0.o"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio ./config/wdio.conf.js"
   },
   "dependencies": {
     "chai": "^5.0.0"

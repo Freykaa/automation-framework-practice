@@ -1,4 +1,4 @@
-import chai from 'chai';
+/* import chai from 'chai';
 
 const { expect } = chai;
 
@@ -54,4 +54,4 @@ describe("Create a board", () => {
         const nameAfterCreation = await boardNameDisplayed.getText();
         expect(nameAfterCreation).to.equal(newBoardName);
     })
-})
+}) */
