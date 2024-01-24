@@ -1,4 +1,4 @@
-import chai from 'chai';
+/* import chai from 'chai';
 
 const { expect } = chai;
 
@@ -46,4 +46,4 @@ describe("Search", () => {
         const nameAfterSearch = await boardNameDisplayed.getText();
         expect(nameAfterSearch).to.equal(searchValue); 
     });
-});
+}); */

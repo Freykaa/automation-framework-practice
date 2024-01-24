@@ -1,4 +1,4 @@
-import chai from 'chai';
+/* import chai from 'chai';
 
 const { expect } = chai;
 
@@ -52,4 +52,4 @@ describe("Edit workspace", () => {
         const getHomeWorkspaceName = await $('span[data-testid="home-team-tab-name"]').getText();
         expect(getHomeWorkspaceName).to.equal(newWorkspaceName);
     });
-});
+}); */

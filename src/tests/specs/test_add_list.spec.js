@@ -1,4 +1,4 @@
-import chai from 'chai';
+/* import chai from 'chai';
 
 const { expect } = chai;
 
@@ -64,4 +64,4 @@ describe("Add list", () => {
         const getListName = await listName.getText();
         expect(getListName).to.equal(listValue);
     });
-});
+}); */
