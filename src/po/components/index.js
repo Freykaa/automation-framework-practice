@@ -1,7 +1,2 @@
-import HeaderComponent from './common/header.component.js';
-import LoginComponent from './login/login.component.js';
-
-export default {
-    HeaderComponent,
-    LoginComponent,
-};
+export { HeaderComponent as Header } from './common/header.component.js';
+export { LoginComponent as LoginForm } from './login/login.component.js';
