@@ -1,12 +1,12 @@
-import BaseComponent from './base.component.js';
+import BaseComponent from "./base.component.js";
 
 class HeaderComponent extends BaseComponent {
     constructor() {
-        super('[data-testid="bignav"]');
+        super('[data-testid="authenticated-header"]');
     }
 
-    get loginBtn() {
-        return this.rootEl.$('//div/a[contains(@href, "login")]');
+    get memberMenuBtn() {
+        return this.rootEl.$('button[data-testid="header-member-menu-button"]');
     }
 }
 
