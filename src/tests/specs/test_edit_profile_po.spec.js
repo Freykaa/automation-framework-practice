@@ -1,11 +1,8 @@
-import { page } from '../../po/index.js';
+import { page } from "../../po/index.js";
 
-describe("Sign in", () => {
+describe("Edit Profile", () => {
     beforeEach(async () => {
         await page('home').open();
-      });
-
-    it("Sign in using email", async () => {
         await page('home').navigationBar.loginBtn.click();
         await page('login').loginForm.loginSubmitBtn.click();
         await page('login').loginForm.input('username').setValue('motay64399@anawalls.com');
@@ -13,6 +10,13 @@ describe("Sign in", () => {
         await page('login').loginForm.input('password').waitForDisplayed({ timeout: 10000 });
         await page('login').loginForm.input('password').setValue('&mDXtUkEiiF$97&');
         await page('login').loginForm.loginSubmitBtn.click();
-        await expect(browser).toHaveUrl('https://trello.com/u/motay64399/boards');
-    } )
-})
+      });
+
+    it("Get error when changing to existing username", async () => {
+        await page('boards').header.memberMenuBtn.click();
+        await page('boards').accountMenu.accountMenuProfileBtn.click();
+        await page('account').profileTab.input('username').setValue('testingtester');
+        await page('account').profileTab.profileSbmtBtn.click();
+        await expect(page('account').profileTab.saveProfileErrorUsername).toBeDisplayed();
+    });
+});

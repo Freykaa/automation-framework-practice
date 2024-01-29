@@ -1,1 +1,1 @@
-export { LoginPage, HomePage, BoardsPage, page } from './pages/index.js';
+export { LoginPage, HomePage, BoardsPage, AccountPage, page } from './pages/index.js';
