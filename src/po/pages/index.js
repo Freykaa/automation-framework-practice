@@ -11,16 +11,10 @@ function page(name) {
     const items = {
         login: new LoginPage(),
         home: new HomePage(),
-        boards: new BoardsPage,
-        account: new AccountPage,         
+        boards: new BoardsPage(),
+        account: new AccountPage(),         
     };
     return items[name];
 }
 
-export {
-    LoginPage,
-    HomePage,
-    BoardsPage,
-    AccountPage,
-    page,
-};
+export default page;

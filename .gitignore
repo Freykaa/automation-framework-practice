@@ -6,3 +6,4 @@ src/tests/specs/test_create_board.spec.js
 src/tests/specs/test_edit_workspace.spec.js
 src/tests/specs/test_filter_card.spec.js
 src/tests/specs/test_search_board.spec.js
+src/tests/specs/test_edit_workspace_po.spec.js

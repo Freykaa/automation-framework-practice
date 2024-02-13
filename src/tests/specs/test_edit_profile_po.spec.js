@@ -1,4 +1,4 @@
-import { page } from "../../po/index.js";
+import page from "../../po/pages/index.js";
 
 describe("Edit Profile", () => {
     beforeEach(async () => {
