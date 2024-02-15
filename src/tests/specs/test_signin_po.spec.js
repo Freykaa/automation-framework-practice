@@ -9,5 +9,5 @@ describe("Sign in", () => {
     it("Sign in using email", async () => {
         await page('login').login('motay64399@anawalls.com', '&mDXtUkEiiF$97&');
         await expect(browser).toHaveUrl('https://trello.com/u/motay64399/boards');
-    } )
-})
+    });
+});

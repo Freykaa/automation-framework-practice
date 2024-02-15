@@ -137,7 +137,7 @@ export const config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000,
-        //grep: 'Change workspace name'
+        grep: 'Search for a board'
     },
 
     //

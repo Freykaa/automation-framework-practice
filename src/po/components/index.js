@@ -6,3 +6,4 @@ export { ProfileTabComponent as ProfileTab } from './account_menu/profile_tab.co
 export { LeftSidebarComponent as LeftSidebar } from './common/left_sidebar_container.component.js';
 export { WorkspaceSettingsHeaderComponent as WorkspaceSettingsHeader } from './workspace/workspace_settings_header.componen.js';
 export { WorkspaceNavigationComponent as WorkspaceNavigation } from './workspace/workspace_navigation.component.js';
+export { SearchResultComponent as SearchResult } from './common/search_result.component.js';
