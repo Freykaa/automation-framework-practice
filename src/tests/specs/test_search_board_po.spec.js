@@ -10,7 +10,5 @@ describe("Sign in", () => {
     it("Search for a board", async () => {
         await page('boards').searchBoard('filter');
         await expect(page('boards').searchResults()).toBeClickable();
-        // const searchResult = await $('a[data-testid="cross-product-search-result"]');
-        // await expect(searchResult).toBeClickable();
     });
 });
