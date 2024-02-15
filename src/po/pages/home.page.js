@@ -6,6 +6,10 @@ class HomePage extends BasePage {
         super('https://trello.com/');
         this.navigationBar = new NavigationBar();
     }
+
+    async goToLoginPage() {
+        await this.navigationBar.loginBtn.click();
+    }
 }
 
 export default HomePage;

@@ -1,22 +1,15 @@
-import { page } from "../../po/index.js";
-
+import page from "../../po/pages/index.js";
+// refacto -- move all actions to page object
 describe("Edit Profile", () => {
     beforeEach(async () => {
         await page('home').open();
-        await page('home').navigationBar.loginBtn.click();
-        await page('login').loginForm.loginSubmitBtn.click();
-        await page('login').loginForm.input('username').setValue('motay64399@anawalls.com');
-        await page('login').loginForm.loginSubmitBtn.click();
-        await page('login').loginForm.input('password').waitForDisplayed({ timeout: 10000 });
-        await page('login').loginForm.input('password').setValue('&mDXtUkEiiF$97&');
-        await page('login').loginForm.loginSubmitBtn.click();
+        await page('home').goToLoginPage();
+        await page('login').login('motay64399@anawalls.com', '&mDXtUkEiiF$97&'); //steps for authorising user
       });
 
     it("Get error when changing to existing username", async () => {
-        await page('boards').header.memberMenuBtn.click();
-        await page('boards').accountMenu.accountMenuProfileBtn.click();
-        await page('account').profileTab.input('username').setValue('testingtester');
-        await page('account').profileTab.profileSbmtBtn.click();
+        await page('boards').goToAccountProfile();
+        await page('account').changeAccountUsername('testingtester');
         await expect(page('account').profileTab.saveProfileErrorUsername).toBeDisplayed();
-    });
+        });
 });

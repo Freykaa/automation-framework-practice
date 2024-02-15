@@ -1,3 +1,4 @@
+# .gitignore
 node_modules
 src/tests/specs/test_add_card.spec.js
 src/tests/specs/test_add_list.spec.js
