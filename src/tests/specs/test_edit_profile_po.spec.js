@@ -1,5 +1,5 @@
 import page from "../../po/pages/index.js";
-
+// refacto -- move all actions to page object
 describe("Edit Profile", () => {
     beforeEach(async () => {
         await page('home').open();
@@ -8,10 +8,8 @@ describe("Edit Profile", () => {
       });
 
     it("Get error when changing to existing username", async () => {
-        await page('boards').header.memberMenuBtn.click();
-        await page('boards').accountMenu.accountMenuProfileBtn.click();
-        await page('account').profileTab.input('username').setValue('testingtester');
-        await page('account').profileTab.profileSbmtBtn.click();
+        await page('boards').goToAccountProfile();
+        await page('account').changeAccountUsername('testingtester');
         await expect(page('account').profileTab.saveProfileErrorUsername).toBeDisplayed();
-    });
+        });
 });
