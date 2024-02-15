@@ -1,6 +1,6 @@
 import page from '../../po/pages/index.js';
 
-describe("Sign in", () => {
+describe("Search actions", () => {
     beforeEach(async () => {
         await page('home').open();
         await page('home').goToLoginPage();

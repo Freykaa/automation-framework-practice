@@ -7,3 +7,5 @@ export { LeftSidebarComponent as LeftSidebar } from './common/left_sidebar_conta
 export { WorkspaceSettingsHeaderComponent as WorkspaceSettingsHeader } from './workspace/workspace_settings_header.componen.js';
 export { WorkspaceNavigationComponent as WorkspaceNavigation } from './workspace/workspace_navigation.component.js';
 export { SearchResultComponent as SearchResult } from './common/search_result.component.js';
+export { BoardCreationWindowComponent as BoardCreationWindow } from './boards/boards_creation_window.component.js';
+export { BoardsPageTeamSectionComponent as BoardsPageTeamSection } from './boards/boards_page_team_section.component.js';
