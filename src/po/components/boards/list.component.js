@@ -9,10 +9,6 @@ class ListComponent extends BaseComponent {
         return this.rootEl.$('button[data-testid="list-composer-button"]');
     };
 
-    input(listNameField) {
-        return this.rootEl.$('form > textarea');
-    };
-
     get createListBtn() {
         return this.rootEl.$('button[data-testid="list-composer-add-list-button"]');
     };
@@ -21,6 +17,25 @@ class ListComponent extends BaseComponent {
         return this.rootEl.$('[data-testid="list-header"] [data-testid="list-name"]');
     };
 
+    get cardNameText() {
+        return this.rootEl.$$('[data-testid="card-name"]');
+    };
+
+    get addCardBtn() {
+        return this.rootEl.$('button[data-testid="list-add-card-button"]');
+    };
+
+    get createCardBtn() {
+        return this.rootEl.$('button[data-testid="list-card-composer-add-card-button"]');
+    };
+
+    input(listNameField) {
+        return this.rootEl.$('form > textarea');
+    };
+
+    input(cardNameField) {
+        return this.rootEl.$('textarea[data-testid="list-card-composer-textarea"]');
+    };
 };
 
 export { ListComponent };

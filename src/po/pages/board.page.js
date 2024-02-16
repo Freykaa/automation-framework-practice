@@ -13,9 +13,19 @@ class BoardPage extends BasePage {
        await this.list.createListBtn.click();
     };
 
+    async createCard(cardName) {
+        await this.list.addCardBtn.click();
+        await this.list.input('cardNameField').setValue(cardName);
+        await this.list.createCardBtn.click();
+    };
+
     async getListName() {
         return await this.list.listNameText;
-    }
+    };
+
+    async getCardName() {
+        return await this.list.cardNameText;
+    };
 };
 
 export default BoardPage;

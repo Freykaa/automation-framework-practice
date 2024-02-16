@@ -137,7 +137,7 @@ export const config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000,
-        //grep: 'Create a list'
+        //grep: 'Create a card'
     },
 
     //
