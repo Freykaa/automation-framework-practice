@@ -6,3 +6,9 @@ export { ProfileTabComponent as ProfileTab } from './account_menu/profile_tab.co
 export { LeftSidebarComponent as LeftSidebar } from './common/left_sidebar_container.component.js';
 export { WorkspaceSettingsHeaderComponent as WorkspaceSettingsHeader } from './workspace/workspace_settings_header.componen.js';
 export { WorkspaceNavigationComponent as WorkspaceNavigation } from './workspace/workspace_navigation.component.js';
+export { SearchResultComponent as SearchResult } from './common/search_result.component.js';
+export { BoardCreationWindowComponent as BoardCreationWindow } from './boards/boards_creation_window.component.js';
+export { BoardsPageTeamSectionComponent as BoardsPageTeamSection } from './boards/boards_page_team_section.component.js';
+export { ListComponent as List} from './boards/list.component.js';
+export { FilterComponent as Filter} from './boards/filter.component.js';
+export { BoardHeaderComponent as BoardHeader } from './boards/board_header.component.js';

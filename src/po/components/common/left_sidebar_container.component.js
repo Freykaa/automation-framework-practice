@@ -7,6 +7,10 @@ class LeftSidebarComponent extends BaseComponent {
 
     get homeWorkspaceSettingsBtn() {
         return this.rootEl.$('[data-testid="home-team-settings-tab"]');
+    };
+
+    get homeTeamBoardsTab() {
+        return this.rootEl.$('[data-testid="home-team-boards-tab"]');
     }
 }
 
