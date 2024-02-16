@@ -10,3 +10,5 @@ export { SearchResultComponent as SearchResult } from './common/search_result.co
 export { BoardCreationWindowComponent as BoardCreationWindow } from './boards/boards_creation_window.component.js';
 export { BoardsPageTeamSectionComponent as BoardsPageTeamSection } from './boards/boards_page_team_section.component.js';
 export { ListComponent as List} from './boards/list.component.js';
+export { FilterComponent as Filter} from './boards/filter.component.js';
+export { BoardHeaderComponent as BoardHeader } from './boards/board_header.component.js';

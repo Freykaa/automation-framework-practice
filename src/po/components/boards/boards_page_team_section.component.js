@@ -12,6 +12,6 @@ class BoardsPageTeamSectionComponent extends BaseComponent {
     get testBoard() {
         return this.rootEl.$('[title="testing environment"]');
     };
-}
+};
 
 export { BoardsPageTeamSectionComponent };

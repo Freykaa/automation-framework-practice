@@ -34,7 +34,7 @@ class ListComponent extends BaseComponent {
     };
 
     input(cardNameField) {
-        return this.rootEl.$('textarea[data-testid="list-card-composer-textarea"]');
+        return this.rootEl.$('[data-testid="list-name-textarea"]');
     };
 };
 

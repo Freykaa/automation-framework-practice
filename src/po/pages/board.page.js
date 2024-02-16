@@ -1,10 +1,12 @@
 import BasePage from './base.page.js';
-import { List } from '../components/index.js';
+import { List, BoardHeader, Filter } from '../components/index.js';
 
 class BoardPage extends BasePage {
     constructor() {
         super('https://trello.com/b/SHnJh1SN/testing-environment');
         this.list = new List();
+        this.boardHeader = new BoardHeader();
+        this.filter = new Filter();
     };
 
     async createList(listName) {
@@ -19,12 +21,21 @@ class BoardPage extends BasePage {
         await this.list.createCardBtn.click();
     };
 
+    async filterByKeyword(keyword) {
+        await this.boardHeader.filterBtn.click();
+        await this.filter.input('keywordField').setValue(keyword);
+    };
+
     async getListName() {
         return await this.list.listNameText;
     };
 
     async getCardName() {
         return await this.list.cardNameText;
+    };
+
+    async getFilterMatches() {
+        return await this.boardHeader.filterMatchesCounter;
     };
 };
 
