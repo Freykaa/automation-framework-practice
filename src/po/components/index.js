@@ -9,3 +9,4 @@ export { WorkspaceNavigationComponent as WorkspaceNavigation } from './workspace
 export { SearchResultComponent as SearchResult } from './common/search_result.component.js';
 export { BoardCreationWindowComponent as BoardCreationWindow } from './boards/boards_creation_window.component.js';
 export { BoardsPageTeamSectionComponent as BoardsPageTeamSection } from './boards/boards_page_team_section.component.js';
+export { ListComponent as List} from './boards/list.component.js';

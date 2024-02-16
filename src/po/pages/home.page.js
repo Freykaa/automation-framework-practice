@@ -30,11 +30,18 @@ class HomePage extends BasePage {
   };
 
   async searchResults() {
-    return this.searchResult.searchResults;
+    return await this.searchResult.searchResults;
+  };
+
+  async goToHomeBoardTab() {
+    await this.leftSidebar.homeTeamBoardsTab.click();
+  };
+
+  async goToTestBoard() {
+    await this.boardsPageTeamSection.testBoard.click();
   };
 
   async createBoard(boardTitle) {
-    await this.leftSidebar.homeTeamBoardsTab.click();
     await this.boardsPageTeamSection.newBoardBtn.click();
     await this.boardcreationWindow.input('createBoardTitle').setValue(boardTitle);
     await this.boardcreationWindow.createBoardSbmtBtn.click();

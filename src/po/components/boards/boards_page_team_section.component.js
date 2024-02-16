@@ -8,6 +8,10 @@ class BoardsPageTeamSectionComponent extends BaseComponent {
     get newBoardBtn() {
         return this.rootEl.$('div.board-tile.mod-add');
     }
+
+    get testBoard() {
+        return this.rootEl.$('[title="testing environment"]');
+    };
 }
 
 export { BoardsPageTeamSectionComponent };
