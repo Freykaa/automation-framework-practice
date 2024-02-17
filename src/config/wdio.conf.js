@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const config = {
     //
     // ====================
@@ -75,9 +76,13 @@ export const config = {
     capabilities: [{
         browserName: 'chrome',
         browserVersion: "122.0.6261.39",
-            /* 'goog:chromeOptions': {
-            args: ['headless', 'disable-gpu']
-        },   */
+        'goog:chromeOptions': {
+            prefs: {
+              intl: {
+                accept_languages: 'en',
+              },
+            },
+        }
        /*  browserName: 'firefox',
             'moz:firefoxOptions': {
             args: ['-headless']
@@ -162,7 +167,7 @@ export const config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000,
-        //grep: 'Create a board' //--run a specific test
+        //grep: 'Create a list' //--run a specific test
     },
 
     //

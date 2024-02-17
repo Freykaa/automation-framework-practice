@@ -1,13 +1,13 @@
-import BaseComponent from "./base.component.js";
+import BaseComponent from './base.component.js';
 
 class AccountMenuComponent extends BaseComponent {
-    constructor() {
-        super('[data-testid="account-menu"]')
-    }
+  constructor() {
+    super('[data-testid="account-menu"]');
+  }
 
-    get accountMenuProfileBtn() {
-        return this.rootEl.$('[data-testid="account-menu-profile"]');
-    }
+  get accountMenuProfileBtn() {
+    return this.rootEl.$('[data-testid="account-menu-profile"]');
+  }
 }
 
 export default AccountMenuComponent;

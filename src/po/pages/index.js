@@ -10,15 +10,15 @@ import BoardPage from './board.page.js';
  * @returns {LoginPage|PromoPage|HomePage|AccountPage|WorkspaceSettings|BoardPage}
  */
 function page(name) {
-    const items = {
-        login: new LoginPage(),
-        promo: new PromoPage(),
-        home: new HomePage(),
-        account: new AccountPage(),
-        workspaceSettings: new WorkspaceSettings(),
-        board: new BoardPage(),         
-    };
-    return items[name];
+  const items = {
+    login: new LoginPage(),
+    promo: new PromoPage(),
+    home: new HomePage(),
+    account: new AccountPage(),
+    workspaceSettings: new WorkspaceSettings(),
+    board: new BoardPage(),
+  };
+  return items[name];
 }
 
 export default page;

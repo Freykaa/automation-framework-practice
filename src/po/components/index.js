@@ -12,20 +12,22 @@ import BoardsPageTeamSectionComponent from './boards/boards_page_team_section.co
 import ListComponent from './boards/list.component.js';
 import FilterComponent from './boards/filter.component.js';
 import BoardHeaderComponent from './boards/board_header.component.js';
+import BoardComponent from './boards/board.component.js';
 
 export {
-    NavigationBarComponent as NavigationBar,
-    LoginComponent as LoginForm,
-    HeaderComponent as Header,
-    AccountMenuComponent as AccountMenu,
-    ProfileTabComponent as ProfileTab,
-    LeftSidebarComponent as LeftSidebar,
-    WorkspaceSettingsHeaderComponent as WorkspaceSettingsHeader,
-    WorkspaceNavigationComponent as WorkspaceNavigation,
-    SearchResultComponent as SearchResult,
-    BoardCreationWindowComponent as BoardCreationWindow,
-    BoardsPageTeamSectionComponent as BoardsPageTeamSection,
-    ListComponent as List,
-    FilterComponent as Filter,
-    BoardHeaderComponent as BoardHeader,
+  NavigationBarComponent as NavigationBar,
+  LoginComponent as LoginForm,
+  HeaderComponent as Header,
+  AccountMenuComponent as AccountMenu,
+  ProfileTabComponent as ProfileTab,
+  LeftSidebarComponent as LeftSidebar,
+  WorkspaceSettingsHeaderComponent as WorkspaceSettingsHeader,
+  WorkspaceNavigationComponent as WorkspaceNavigation,
+  SearchResultComponent as SearchResult,
+  BoardCreationWindowComponent as BoardCreationWindow,
+  BoardsPageTeamSectionComponent as BoardsPageTeamSection,
+  ListComponent as List,
+  FilterComponent as Filter,
+  BoardHeaderComponent as BoardHeader,
+  BoardComponent as Board,
 };
