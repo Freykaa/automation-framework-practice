@@ -1,14 +1,31 @@
-export { NavigationBarComponent as NavigationBar } from './common/navigation_bar.component.js';
-export { LoginComponent as LoginForm } from './login/login.component.js';
-export { HeaderComponent as Header } from './common/header.component.js';
-export { AccountMenuComponent as AccountMenu } from './common/account_menu.component.js';
-export { ProfileTabComponent as ProfileTab } from './account_menu/profile_tab.component.js';
-export { LeftSidebarComponent as LeftSidebar } from './common/left_sidebar_container.component.js';
-export { WorkspaceSettingsHeaderComponent as WorkspaceSettingsHeader } from './workspace/workspace_settings_header.componen.js';
-export { WorkspaceNavigationComponent as WorkspaceNavigation } from './workspace/workspace_navigation.component.js';
-export { SearchResultComponent as SearchResult } from './common/search_result.component.js';
-export { BoardCreationWindowComponent as BoardCreationWindow } from './boards/boards_creation_window.component.js';
-export { BoardsPageTeamSectionComponent as BoardsPageTeamSection } from './boards/boards_page_team_section.component.js';
-export { ListComponent as List} from './boards/list.component.js';
-export { FilterComponent as Filter} from './boards/filter.component.js';
-export { BoardHeaderComponent as BoardHeader } from './boards/board_header.component.js';
+import NavigationBarComponent from './common/navigation_bar.component.js';
+import LoginComponent from './login/login.component.js';
+import HeaderComponent from './common/header.component.js';
+import AccountMenuComponent from './common/account_menu.component.js';
+import ProfileTabComponent from './account_menu/profile_tab.component.js';
+import LeftSidebarComponent from './common/left_sidebar_container.component.js';
+import WorkspaceSettingsHeaderComponent from './workspace/workspace_settings_header.component.js';
+import WorkspaceNavigationComponent from './workspace/workspace_navigation.component.js';
+import SearchResultComponent from './common/search_result.component.js';
+import BoardCreationWindowComponent from './boards/boards_creation_window.component.js';
+import BoardsPageTeamSectionComponent from './boards/boards_page_team_section.component.js';
+import ListComponent from './boards/list.component.js';
+import FilterComponent from './boards/filter.component.js';
+import BoardHeaderComponent from './boards/board_header.component.js';
+
+export {
+    NavigationBarComponent as NavigationBar,
+    LoginComponent as LoginForm,
+    HeaderComponent as Header,
+    AccountMenuComponent as AccountMenu,
+    ProfileTabComponent as ProfileTab,
+    LeftSidebarComponent as LeftSidebar,
+    WorkspaceSettingsHeaderComponent as WorkspaceSettingsHeader,
+    WorkspaceNavigationComponent as WorkspaceNavigation,
+    SearchResultComponent as SearchResult,
+    BoardCreationWindowComponent as BoardCreationWindow,
+    BoardsPageTeamSectionComponent as BoardsPageTeamSection,
+    ListComponent as List,
+    FilterComponent as Filter,
+    BoardHeaderComponent as BoardHeader,
+};

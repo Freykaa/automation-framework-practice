@@ -11,7 +11,7 @@ class WorkspaceSettings extends BasePage {
 
     async changeWorkspaceDetails(workspacename) {
         await this.workspaceSettingsHeader.editWorkspaceDetailsIcon.click();
-        await this.workspaceSettingsHeader.input('displayNameField').setValue(workspacename);
+        await this.workspaceSettingsHeader.input('displayedNameField').setValue(workspacename);
         await this.workspaceSettingsHeader.detailsSbmtBtn.click();
     };
 }

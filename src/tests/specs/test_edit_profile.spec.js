@@ -1,5 +1,5 @@
 import page from "../../po/pages/index.js";
-// refacto -- move all actions to page object
+// TODO -- move all actions to page object
 describe("Edit Profile", () => {
     beforeEach(async () => {
         await page('promo').open();

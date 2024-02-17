@@ -10,4 +10,4 @@ class AccountMenuComponent extends BaseComponent {
     }
 }
 
-export { AccountMenuComponent };
+export default AccountMenuComponent;

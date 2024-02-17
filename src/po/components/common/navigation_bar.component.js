@@ -10,4 +10,4 @@ class NavigationBarComponent extends BaseComponent {
     }
 }
 
-export { NavigationBarComponent };
+export default NavigationBarComponent;

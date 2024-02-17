@@ -22,4 +22,4 @@ class LoginComponent extends BaseComponent {
     }
 }
 
-export { LoginComponent };
+export default LoginComponent;

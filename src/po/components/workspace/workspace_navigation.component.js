@@ -10,4 +10,4 @@ class WorkspaceNavigationComponent extends BaseComponent {
     };
 };
 
-export { WorkspaceNavigationComponent };
+export default WorkspaceNavigationComponent;

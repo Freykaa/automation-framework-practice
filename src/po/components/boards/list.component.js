@@ -14,7 +14,7 @@ class ListComponent extends BaseComponent {
     };
 
     get listNameText() {
-        return this.rootEl.$('[data-testid="list-header"] [data-testid="list-name"]');
+        return this.rootEl.$('[data-testid="list-name"]');
     };
 
     get cardNameText() {
@@ -29,13 +29,17 @@ class ListComponent extends BaseComponent {
         return this.rootEl.$('button[data-testid="list-card-composer-add-card-button"]');
     };
 
-    input(listNameField) {
-        return this.rootEl.$('form > textarea');
+    /**
+   * @param name {'listName' | 'cardName' |}
+   */
+    input(name) {
+    const selectors = {
+      listName: 'form > textarea',
+      cardName: '[data-testid="list-card-composer-textarea"]',
     };
 
-    input(cardNameField) {
-        return this.rootEl.$('[data-testid="list-name-textarea"]');
-    };
+    return this.rootEl.$(selectors[name]);
+  }
 };
 
-export { ListComponent };
+export default ListComponent;

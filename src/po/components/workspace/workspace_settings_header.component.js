@@ -8,14 +8,18 @@ class WorkspaceSettingsHeaderComponent extends BaseComponent {
     get editWorkspaceDetailsIcon() {
         return this.rootEl.$('[data-testid="EditIcon"]');
     }
-    
-    input (displayNameField) {
-        return this.rootEl.$('#displayName');
-    }
 
     get detailsSbmtBtn() {
         return this.rootEl.$('button[type="submit"]');
     }
+
+    input(name) {
+        const selectors = {
+            displayedNameField: '#displayName'
+        };
+
+        return this.rootEl.$(selectors[name]);
+    }
 }
 
-export { WorkspaceSettingsHeaderComponent };
+export default WorkspaceSettingsHeaderComponent;

@@ -13,9 +13,13 @@ class HeaderComponent extends BaseComponent {
         return this.rootEl.$('span.css-1wits42');
     }
 
-    input (searchField) {
-        return this.rootEl.$('input[data-test-id="search-dialog-input"]');
-    }
+    input(name) {
+        const selectors = {
+          searchField: 'input[data-test-id="search-dialog-input"]',
+        };
+    
+        return this.rootEl.$(selectors[name]);
+    };
 }
 
-export { HeaderComponent };
+export default HeaderComponent;

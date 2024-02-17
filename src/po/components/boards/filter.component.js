@@ -5,10 +5,14 @@ class FilterComponent extends BaseComponent {
         super('section.rX4pAv5sWHFNjp');
     };
 
-    input(keywordField) {
-        return this.rootEl.$('input.nch-textfield__input.lsOhPsHuxEMYEb');
+    input(name) {
+        const selectors = {
+          filterKeywordField: 'input.nch-textfield__input.lsOhPsHuxEMYEb',
+        };
+    
+        return this.rootEl.$(selectors[name]);
     };
     
 };
 
-export { FilterComponent };
+export default FilterComponent;

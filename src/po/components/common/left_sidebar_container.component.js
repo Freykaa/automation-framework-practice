@@ -14,4 +14,4 @@ class LeftSidebarComponent extends BaseComponent {
     }
 }
 
-export { LeftSidebarComponent };
+export default LeftSidebarComponent;

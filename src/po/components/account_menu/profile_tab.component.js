@@ -13,9 +13,13 @@ class ProfileTabComponent extends BaseComponent {
         return this.rootEl.$('#SaveProfileError_Field_username');
     }
 
-    input(username) {
-        return this.rootEl.$('#username');
-    }
-}
+    input(name) {
+        const selectors = {
+          username: '#username',
+        };
+    
+        return this.rootEl.$(selectors[name]);
+    };
+};
 
-export { ProfileTabComponent };
+export default ProfileTabComponent;

@@ -1,6 +1,6 @@
 import page from "../../po/pages/index.js";
 
-describe("Card actions", () => {
+describe("Filter actions", () => {
     beforeEach(async () => {
         await page('promo').open();
         await page('promo').goToLoginPage();
@@ -9,8 +9,10 @@ describe("Card actions", () => {
         await page('home').goToTestBoard();
       });
 
-    it("Create a card", async () => {
-        await page('board').createCard('penguin');
-        await expect(page('board').getCardName()).toHaveText('penguin');
-        });
+    it("Filter by keyword", async () => {
+        await page('board').filterByKeyword('penguin');
+        await expect(page('board').getFilterMatches()).toBeDisplayed();
+      });
 });
+
+//TODO add aftereach section to delete created artifacts

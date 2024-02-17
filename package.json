@@ -6,12 +6,10 @@
     "@wdio/local-runner": "^8.26.3",
     "@wdio/mocha-framework": "^8.26.3",
     "@wdio/spec-reporter": "^8.26.3",
-    "chai": "5.0.o"
+    "chai": "*",
+    "mocha": "*"
   },
   "scripts": {
     "test": "wdio src/config/wdio.conf.js"
-  },
-  "dependencies": {
-    "chai": "^5.0.0"
   }
 }

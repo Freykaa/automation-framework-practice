@@ -10,4 +10,4 @@ class SearchResultComponent extends BaseComponent {
     }
 }
 
-export { SearchResultComponent };
+export default SearchResultComponent;

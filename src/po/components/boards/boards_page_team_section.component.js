@@ -14,4 +14,4 @@ class BoardsPageTeamSectionComponent extends BaseComponent {
     };
 };
 
-export { BoardsPageTeamSectionComponent };
+export default BoardsPageTeamSectionComponent;

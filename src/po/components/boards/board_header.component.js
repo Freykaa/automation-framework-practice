@@ -12,6 +12,7 @@ class BoardHeaderComponent extends BaseComponent {
     get filterMatchesCounter() {
         return this.rootEl.$('[data-testid="filter-popover-button-filter-count"]');
     };
+    
 };
 
-export { BoardHeaderComponent };
+export default BoardHeaderComponent;

@@ -22,6 +22,30 @@ export const config = {
     // will be called from there.
     //
     specs: ['../tests/**/*.spec.js'],
+
+    suites: {
+        login: [
+            
+                './tests/specs/test_login.spec.js',
+        ],
+        edit_settings: [
+            [
+                './tests/specs/test_edit_profile.spec.js',
+                './tests/specs/test_edit_workspace.spec.js',
+            ]
+        ],
+        search: [
+                './tests/specs/test_search_board.spec.js'
+        ],
+        board: [
+            [
+                './tests/specs/test_create_board.spec.js',
+                './tests/specs/test_create_list.spec.js',
+                './tests/specs/test_create_card.spec.js',
+                './tests/specs/test_filter_card.spec.js'
+            ]
+        ],
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -50,6 +74,7 @@ export const config = {
     //
     capabilities: [{
         browserName: 'chrome',
+        browserVersion: "122.0.6261.39",
             /* 'goog:chromeOptions': {
             args: ['headless', 'disable-gpu']
         },   */
@@ -137,7 +162,7 @@ export const config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000,
-        //grep: '' --run a specific test
+        //grep: 'Create a board' //--run a specific test
     },
 
     //
