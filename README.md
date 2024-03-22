@@ -1,6 +1,6 @@
 # Trello Automated Testing Framework
 
-This repository contains an automated testing framework for the Trello.com site, utilizing JavaScript, WebdriverIO, Mocha, and potentially Cucumber for behavior-driven development (BDD) in the future. The framework aims to streamline the testing process and ensure the quality and reliability of the Trello web application.
+This repository contains an automated testing framework for the Trello.com site, utilizing JavaScript, WebdriverIO, Mocha, and potentially Cucumber for behavior-driven development (BDD) in the future. The framework is created as a study project.
 
 ## Prerequisites
 - Node.js installed on your system
