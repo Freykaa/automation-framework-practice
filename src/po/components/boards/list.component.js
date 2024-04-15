@@ -26,7 +26,9 @@ class ListComponent extends BaseComponent {
   }
 
   get createCardBtn() {
-    return this.rootEl.$('button[data-testid="list-card-composer-add-card-button"]');
+    return this.rootEl.$(
+      'button[data-testid="list-card-composer-add-card-button"]',
+    );
   }
 
   /**

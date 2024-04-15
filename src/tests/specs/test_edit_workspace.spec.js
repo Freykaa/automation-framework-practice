@@ -9,7 +9,11 @@ describe('Edit workspace', () => {
 
   it('Change workspace name', async () => {
     await page('home').leftSidebar.homeWorkspaceSettingsBtn.click();
-    await page('workspaceSettings').changeWorkspaceDetails('testingtesting space');
-    await expect(page('workspaceSettings').workspaceNavigation.workspaceDetailName).toHaveText('testingtesting space');
+    await page('workspaceSettings').changeWorkspaceDetails(
+      'testingtesting space',
+    );
+    await expect(
+      page('workspaceSettings').workspaceNavigation.workspaceDetailName,
+    ).toHaveText('testingtesting space');
   });
 });

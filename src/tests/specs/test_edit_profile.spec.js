@@ -10,6 +10,8 @@ describe('Edit Profile', () => {
   it('Get error when changing to existing username', async () => {
     await page('home').goToAccountProfile();
     await page('account').changeAccountUsername('testingtester');
-    await expect(page('account').profileTab.saveProfileErrorUsername).toBeDisplayed();
+    await expect(
+      page('account').profileTab.saveProfileErrorUsername,
+    ).toBeDisplayed();
   });
 });

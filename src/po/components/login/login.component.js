@@ -10,8 +10,8 @@ class LoginComponent extends BaseComponent {
   }
 
   /**
-     * @param credentials {'username' | 'password'}
-     */
+   * @param credentials {'username' | 'password'}
+   */
   input(credentials) {
     const selectors = {
       username: '#username',

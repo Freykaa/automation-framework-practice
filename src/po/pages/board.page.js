@@ -1,6 +1,10 @@
 import BasePage from './base.page.js';
 import {
-  List, BoardHeader, Filter, WorkspaceNavigation, Board,
+  List,
+  BoardHeader,
+  Filter,
+  WorkspaceNavigation,
+  Board,
 } from '../components/index.js';
 
 class BoardPage extends BasePage {

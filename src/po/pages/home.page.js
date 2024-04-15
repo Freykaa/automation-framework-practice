@@ -43,7 +43,9 @@ class HomePage extends BasePage {
 
   async createBoard(boardTitle) {
     await this.boardsPageTeamSection.newBoardBtn.click();
-    await this.boardcreationWindow.input('createBoardTitle').setValue(boardTitle);
+    await this.boardcreationWindow
+      .input('createBoardTitle')
+      .setValue(boardTitle);
     await this.boardcreationWindow.createBoardSbmtBtn.click();
   }
 }
