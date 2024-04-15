@@ -7,7 +7,7 @@ describe('Sign in', () => {
   });
 
   it('Sign in using email', async () => {
-    await page('login').login('motay64399@anawalls.com', '&mDXtUkEiiF$97&');
+    await page('login').login(process.env.USERNAME, process.env.PASSWORD); // steps for authorising user
     await expect(browser).toHaveUrl('https://trello.com/u/motay64399/boards');
   });
 });

@@ -1,4 +1,5 @@
 /* eslint-disable */
+import 'dotenv/config';
 export const config = {
     //
     // ====================
