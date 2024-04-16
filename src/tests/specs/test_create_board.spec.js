@@ -4,7 +4,7 @@ describe('Board actions', () => {
   beforeEach(async () => {
     await page('promo').open();
     await page('promo').goToLoginPage();
-    await page('login').login(process.env.USERNAME, process.env.PASSWORD); // steps for authorising user
+    await page('login').login(process.env.USERNAMETRELLO, process.env.PASSWORDTRELLO); // steps for authorising user
     await page('home').goToHomeBoardTab();
   });
 
