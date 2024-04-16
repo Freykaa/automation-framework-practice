@@ -12,12 +12,15 @@ describe('Trello API', () => {
     it('should retrieve all boards associated with the member', (done) => {
         request('https://api.trello.com')
             .get(`/1/members/me/boards?key=${apiKey}&token=${apiToken}`)
-            .expect(200, done);
+            .expect('Content-Type', /json/)
+            .expect(200, done)
     });
+
 
     it('should create a board', (done) => {
         request('https://api.trello.com')
             .post(`/1/boards/?name=pupupu&key=${apiKey}&token=${apiToken}`)
+            .expect('Content-Type', /json/)
             .expect(200)
             .then(response => {
                 boardId = response.body.id;
@@ -30,12 +33,14 @@ describe('Trello API', () => {
         request('https://api.trello.com')
             .put(`/1/boards/${boardId}?key=${apiKey}&token=${apiToken}`)
             .send({ name: 'update' })
-            .expect(200, done);
+            .expect('Content-Type', /json/)
+            .expect(200, done)
     });
 
     it('should delete a board', (done) => {
         request('https://api.trello.com')
             .del(`/1/boards/${boardId}?key=${apiKey}&token=${apiToken}`)
+            .expect('Content-Type', /json/)
             .expect(200, done);
     });
 });
