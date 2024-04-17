@@ -20,7 +20,11 @@ To run the automated tests, execute the following command:
 ```
 npm run test
 ```
-
+## Running Reporter
+To generate allure report, execute the following command:
+```
+npx allure-commandline serve
+```
 ## Structure
 - `tests/`: Contains test scripts written in Mocha using WebdriverIO for interacting with the Trello website.
 - `pages/`: Contains Page Object Model (POM) files to abstract interactions with Trello web elements.
