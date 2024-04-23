@@ -1,6 +1,10 @@
 {
   "name": "automation-framework-practice",
   "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "supertest": "^6.3.4"
+  },
   "devDependencies": {
     "@wdio/allure-reporter": "^8.36.0",
     "@wdio/cli": "^8.26.3",
@@ -9,15 +13,13 @@
     "@wdio/spec-reporter": "^8.36.0",
     "allure-commandline": "^2.28.0",
     "chai": "*",
-    "dotenv": "^16.4.5",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-wdio": "^8.24.12",
     "mocha": "*",
-    "prettier": "3.2.5",
-    "supertest": "^6.3.4"
+    "prettier": "3.2.5"
   },
   "scripts": {
     "test:ui": "wdio src/config/wdio.conf.js",
