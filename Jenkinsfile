@@ -12,6 +12,11 @@ pipeline {
     }
 
     stages {
+        stage('Clone Repository') {
+            steps {
+                git branch: 'main', credentialsId: '37212315-61ce-4ba9-808c-55fe5d502cb9', url: 'https://github.com/Freykaa/automation-framework-practice'
+            }
+        }
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
