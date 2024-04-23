@@ -7,6 +7,10 @@ pipeline {
         TRELLO_PASSWORD = credentials('e9cd1ab3-5944-4740-9c71-2c01ac9df7da')
     }
 
+    triggers {
+        cron('H */2 * * *') // Run every 2 hours
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
