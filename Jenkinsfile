@@ -19,17 +19,29 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                script {
+                    node {
+                        npm install
+                    }
+                }
             }
         }
         stage('Run UI Tests') {
             steps {
-                 sh 'npm run test:ui'
+                script {
+                    node {
+                        npm run test:ui
+                    }
+                }
             }
         }
         stage('Run API Tests') {
             steps {
-                sh 'npm run test:api'
+                script {
+                    node {
+                        npm run test:api
+                    }
+                }
             }
         }
     }
