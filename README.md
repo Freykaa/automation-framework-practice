@@ -16,10 +16,16 @@ Before running the tests, ensure that you have configured the following settings
 - Update `wdio.conf.js` file with appropriate WebDriver configuration settings.
 
 ## Running Tests
-To run the automated tests, execute the following command:
+To run the automated UI tests, execute the following command:
 ```
-npm run test
+npm run test:ui
 ```
+## Running Tests
+To run the automated UI tests, execute the following command:
+```
+npm run test:api
+```
+
 ## Running Reporter
 To generate allure report, execute the following command:
 ```

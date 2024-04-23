@@ -1,10 +1,5 @@
 import request from 'supertest';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-const apiKey = process.env.TRELLO_API_KEY;
-const apiToken = process.env.TRELLO_API_TOKEN;
+import  {apiKey, apiToken } from '../../../envconfig.js';
 
 describe('Trello API', () => {
     let boardId;

@@ -20,7 +20,8 @@
     "supertest": "^6.3.4"
   },
   "scripts": {
-    "test": "wdio src/config/wdio.conf.js",
+    "test:ui": "wdio src/config/wdio.conf.js",
+    "test:api": "mocha src/tests/api/api.test.js",
     "lint": "npx eslint src",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src --check",
