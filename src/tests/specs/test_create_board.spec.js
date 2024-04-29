@@ -13,5 +13,3 @@ describe('Board actions', () => {
     await expect(browser).toHaveUrlContaining('creation');
   });
 });
-
-// TODO add aftereach section to delete created artifacts

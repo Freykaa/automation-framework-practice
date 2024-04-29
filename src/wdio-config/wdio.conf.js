@@ -1,5 +1,7 @@
 /* eslint-disable */
 import "dotenv/config";
+import path from 'node:path';
+
 export const config = {
   //
   // ====================
@@ -143,7 +145,7 @@ export const config = {
   //
   // Make sure you have the wdio adapter package for the specific framework installed
   // before running any tests.
-  framework: "mocha",
+  framework: "cucumber",
 
   //
   // The number of times to retry the entire specfile when it fails as a whole
@@ -162,13 +164,12 @@ export const config = {
     outputDir: 'allure-results',
     disableWebdriverStepsReporting: true,
     disableWebdriverScreenshotsReporting: true,
-}]],
-  // Options to be passed to Mocha.
-  // See the full list at http://mochajs.org/
-  mochaOpts: {
-    ui: "bdd",
-    timeout: 60000,
-    //grep: 'Create a list' //--run a specific test
+  }]],
+  cucumberOpts: {
+    import: [
+        path.join(wdio-config, '..', 'step-definitions', '*.js'), // Import all JavaScript files in step-definitions directory
+        path.join(wdio-config, '..', 'features', '*.feature') // Import all feature files in features directory
+    ]
   },
 
   //

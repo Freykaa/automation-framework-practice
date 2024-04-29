@@ -1,0 +1,6 @@
+Feature: Search Actions
+
+Scenario: Search for a board
+    Given user is logged in
+    When user searches for a board with keyword "filter"
+    Then search results should be clickable
